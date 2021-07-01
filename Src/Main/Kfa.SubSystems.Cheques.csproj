@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\dp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.6" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Kfa.SubSystems.Cheques.Business.csproj" />
+    <ProjectReference Include="..\Contracts\Kfa.SubSystems.Cheques.Contracts.csproj" />
+    <ProjectReference Include="..\DataLayer\Kfa.SubSystems.Cheques.DataLayer.csproj" />
+    <ProjectReference Include="..\Reports\Kfa.SubSystems.Cheques.Reports.csproj" />
+  </ItemGroup>
+</Project>

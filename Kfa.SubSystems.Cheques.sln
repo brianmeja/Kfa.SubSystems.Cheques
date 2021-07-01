@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kfa.SubSystems.Cheques.Business", "Src\Business\Kfa.SubSystems.Cheques.Business.csproj", "{6F437F84-85BE-4F38-BFF7-35B230C63072}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{9E59377D-2DBB-4033-8678-9C6C5B053459}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kfa.SubSystems.Cheques.Contracts", "Src\Contracts\Kfa.SubSystems.Cheques.Contracts.csproj", "{2F8324DC-D10F-43C6-B406-7D3448C6AC4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kfa.SubSystems.Cheques.DataLayer", "Src\DataLayer\Kfa.SubSystems.Cheques.DataLayer.csproj", "{7E83883B-FB74-4EA4-A970-9FAC1F69AE7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kfa.SubSystems.Cheques.Reports", "Src\Reports\Kfa.SubSystems.Cheques.Reports.csproj", "{A99326BC-5E7B-4FFD-BA38-5927E94F8869}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kfa.SubSystems.Cheques", "Src\Main\Kfa.SubSystems.Cheques.csproj", "{C5A83BF4-EFCF-48F5-BC85-C581AE3853C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F437F84-85BE-4F38-BFF7-35B230C63072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F437F84-85BE-4F38-BFF7-35B230C63072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F437F84-85BE-4F38-BFF7-35B230C63072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F437F84-85BE-4F38-BFF7-35B230C63072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F8324DC-D10F-43C6-B406-7D3448C6AC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F8324DC-D10F-43C6-B406-7D3448C6AC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F8324DC-D10F-43C6-B406-7D3448C6AC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F8324DC-D10F-43C6-B406-7D3448C6AC4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E83883B-FB74-4EA4-A970-9FAC1F69AE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E83883B-FB74-4EA4-A970-9FAC1F69AE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E83883B-FB74-4EA4-A970-9FAC1F69AE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E83883B-FB74-4EA4-A970-9FAC1F69AE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99326BC-5E7B-4FFD-BA38-5927E94F8869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99326BC-5E7B-4FFD-BA38-5927E94F8869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99326BC-5E7B-4FFD-BA38-5927E94F8869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99326BC-5E7B-4FFD-BA38-5927E94F8869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A83BF4-EFCF-48F5-BC85-C581AE3853C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A83BF4-EFCF-48F5-BC85-C581AE3853C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A83BF4-EFCF-48F5-BC85-C581AE3853C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A83BF4-EFCF-48F5-BC85-C581AE3853C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F437F84-85BE-4F38-BFF7-35B230C63072} = {9E59377D-2DBB-4033-8678-9C6C5B053459}
+		{2F8324DC-D10F-43C6-B406-7D3448C6AC4E} = {9E59377D-2DBB-4033-8678-9C6C5B053459}
+		{7E83883B-FB74-4EA4-A970-9FAC1F69AE7B} = {9E59377D-2DBB-4033-8678-9C6C5B053459}
+		{A99326BC-5E7B-4FFD-BA38-5927E94F8869} = {9E59377D-2DBB-4033-8678-9C6C5B053459}
+		{C5A83BF4-EFCF-48F5-BC85-C581AE3853C2} = {9E59377D-2DBB-4033-8678-9C6C5B053459}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBEB8C7D-0ABA-4D1A-8170-812502C31868}
+	EndGlobalSection
+EndGlobal
