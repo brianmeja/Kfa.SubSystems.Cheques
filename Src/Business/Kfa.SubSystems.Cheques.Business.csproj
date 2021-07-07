@@ -5,6 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.6" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Skia" Version="0.10.6" />
+    <PackageReference Include="Citrus.Avalonia" Version="1.4.3" />
+    <PackageReference Include="Material.Avalonia" Version="2.2.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.10" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+    <PackageReference Include="WebViewControl-Avalonia" Version="2.85.44" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Contracts\Kfa.SubSystems.Cheques.Contracts.csproj" />
   </ItemGroup>
 

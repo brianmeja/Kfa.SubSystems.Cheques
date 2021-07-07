@@ -13,9 +13,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.6" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.6" />
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.6" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Skia" Version="0.10.6" />
+    <PackageReference Include="Citrus.Avalonia" Version="1.4.3" />
+    <PackageReference Include="Material.Avalonia" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -26,12 +30,17 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.10" />
+    <PackageReference Include="WebViewControl-Avalonia" Version="2.85.44" />
 
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Kfa.SubSystems.Cheques.Business.csproj" />
     <ProjectReference Include="..\Contracts\Kfa.SubSystems.Cheques.Contracts.csproj" />
     <ProjectReference Include="..\DataLayer\Kfa.SubSystems.Cheques.DataLayer.csproj" />
+    <ProjectReference Include="..\Libs\Avalonia.Controlz\Avalonia.Controlz.csproj" />
+    <ProjectReference Include="..\Libs\Avalonia.ExtendedToolkit\Avalonia.ExtendedToolkit.csproj" />
+    <ProjectReference Include="..\Libs\AvaloniaGif\AvaloniaGif.csproj" />
     <ProjectReference Include="..\Reports\Kfa.SubSystems.Cheques.Reports.csproj" />
   </ItemGroup>
 </Project>
