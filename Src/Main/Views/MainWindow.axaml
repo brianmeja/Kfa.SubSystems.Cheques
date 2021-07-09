@@ -12,8 +12,6 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-  <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
-    <Button  HorizontalAlignment="Center">SHOW LOGIN</Button>
-  </StackPanel>
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
 </Window>

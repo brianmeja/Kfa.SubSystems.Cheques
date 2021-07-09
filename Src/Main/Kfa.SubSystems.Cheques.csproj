@@ -9,15 +9,7 @@
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaXaml Remove="Styles\EntryLabels.axaml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="Assets\dp.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <AvaloniaResource Include="Styles\EntryLabels.axaml">
-      <Generator>MSBuild:Compile</Generator>
-    </AvaloniaResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.6" />
