@@ -4,6 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="FodyWeavers.xsd" />
+    <None Include="Kfa.SubSystems.Cheques.DataLayer.csproj" />
+  </ItemGroup>
+
    <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.6" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.6" />

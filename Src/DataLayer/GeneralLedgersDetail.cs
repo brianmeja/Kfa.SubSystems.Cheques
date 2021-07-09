@@ -11,8 +11,7 @@ namespace Kfa.SubSystems.Cheques.Datalayer
      [Reactive, Column("balance")]public decimal Balance {get; set;}
      [Reactive, Column("class_of_card")]public string ClassOfCard {get; set;}
     [Reactive, Column("cost_center_code")]public long CostCentreCode {get; set;}
-
-     [Reactive,Column("credit_amount")]public decimal CreditAmount {get; set;}
+    [Reactive,Column("credit_amount")]public decimal CreditAmount {get; set;}
      [Reactive, Column("date")]public DateTime Date {get; set;}
      [Reactive, Column("debit_amount")]public decimal DebitAmount { get; set;}
      [Reactive, Column("gl_type")]public string GlType {get; set;}

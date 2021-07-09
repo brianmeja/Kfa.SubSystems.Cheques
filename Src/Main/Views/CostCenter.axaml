@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="850" Height="800" Width="1000"
+        x:Class="Kfa.SubSystems.Cheques.Views.CostCenter" SystemDecorations="BorderOnly"
+        Title="CostCenter">
+
+  <Grid ColumnDefinitions="Auto,*,Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+       VerticalAlignment="Stretch"
+       HorizontalAlignment="Stretch">
+    <TextBlock Text="COST CENTER" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="28"  Margin="10" Classes="LabelBlock"/>
+    <TextBlock Text="Cost center code" TextWrapping="Wrap" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" FontSize="28"  Margin="10" Classes="LabelBlock"/>
+    <TextBlock Text="Cost center name" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" FontSize="28"  Margin="10" Classes="LabelBlock"/>
+    <TextBlock Text="Supplier code prefix"  TextWrapping="Wrap" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" FontSize="28"  Margin="10" Classes="LabelBlock"/>
+    <TextBlock Text="Region" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" FontSize="28"  Margin="10" Classes="LabelBlock"/>
+    <TextBlock Text="Narration" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" FontSize="28"  Margin="10" Classes="LabelBlock"/>
+  
+    <TextBox  Grid.Column="1" Grid.Row="1" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="1" Grid.Row="2" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="1" Grid.Row="3" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="4" Grid.Row="1" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="4" Grid.Row="2" MinWidth="200" FontSize="28"  Margin="10"/>
+    <Button Content="RESET" HorizontalAlignment="Right" FontSize="28" Grid.Column="0" Grid.Row="4"  Margin="10" Classes="LabelBox" />
+    <Button Content="SEARCH" HorizontalAlignment="Right" FontSize="28" Grid.Column="1" Grid.Row="4"  Margin="10"/>
+    <Button Content="SAVE" HorizontalAlignment="Right" FontSize="28" Grid.Column="2" Grid.Row="3"  Margin="10"/>
+    <Button Content="DELETE" HorizontalAlignment="Right" FontSize="28" Grid.Column="2" Grid.Row="4"  Margin="10"/>
+    <Button Content="CLOSE" HorizontalContentAlignment="Center" FontSize="28" Grid.Column="3" Grid.Row="4"  Margin="10"/>
+    
+
+
+
+  </Grid>
+  
+</Window>

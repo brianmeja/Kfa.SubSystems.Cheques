@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="550" Height="550" Width="600"
+        x:Class="Kfa.SubSystems.Cheques.Views.UserDetails" SystemDecorations="BorderOnly"
+        Title="UserDetails">
+
+  <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+       VerticalAlignment="Stretch"
+       HorizontalAlignment="Stretch">
+
+    <TextBlock Classes="labelBlock" Text="USER DETAILS" Grid.ColumnSpan="2" HorizontalAlignment="Center" />
+    <TextBlock Text="User ID" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
+    <TextBlock Text="Username" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
+    <TextBlock Text="Name" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
+    <TextBlock Text="User Role" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
+    <TextBlock Text="Email" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
+   
+ 
+    <TextBox  Grid.Column="1" Grid.Row="1" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="1" Grid.Row="2" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="1" Grid.Row="3" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="1" Grid.Row="4" MinWidth="200" FontSize="28"  Margin="10"/>
+    <TextBox  Grid.Column="1" Grid.Row="5" MinWidth="200" FontSize="28"  Margin="10"/>
+    <Button Content="SAVE" HorizontalContentAlignment="Center" FontSize="28" Grid.Column="1" Grid.Row="6"  Margin="10"/>
+    <Button Content="CLOSE" HorizontalAlignment="Right" FontSize="28" Grid.Column="1" Grid.Row="6"  Margin="10"/>
+    
+  </Grid> 
+    
+ 
+  
+  
+  
+  
+  
+  
+</Window>
