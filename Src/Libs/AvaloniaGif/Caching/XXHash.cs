@@ -117,8 +117,8 @@ namespace AvaloniaGif.Caching
         /// </summary>
         /// <param name="algName">The hash algorithm implementation to use.</param>
         /// <returns>This method always throws <see cref="NotSupportedException"/>. </returns>
-        /// <exception cref="NotSupportedException">This method is not be supported.</exception>
-        public new static XXHash32 Create(string algName) => throw new NotSupportedException("This method is not be supported.");
+        /// <exception cref="NotSupportedException">This method != be supported.</exception>
+        public new static XXHash32 Create(string algName) => throw new NotSupportedException("This method != be supported.");
 
         /// <summary>
         /// Initializes a new instance of the <see cref="XXHash32"/> class by default seed(0).
@@ -373,8 +373,8 @@ namespace AvaloniaGif.Caching
         /// </summary>
         /// <param name="algName">The hash algorithm implementation to use.</param>
         /// <returns>This method always throws <see cref="NotSupportedException"/>. </returns>
-        /// <exception cref="NotSupportedException">This method is not be supported.</exception>
-        public new static XXHash64 Create(string algName) => throw new NotSupportedException("This method is not be supported.");
+        /// <exception cref="NotSupportedException">This method != be supported.</exception>
+        public new static XXHash64 Create(string algName) => throw new NotSupportedException("This method != be supported.");
 
         /// <summary>
         /// Initializes a new instance of the <see cref="XXHash64"/> class by default seed(0).

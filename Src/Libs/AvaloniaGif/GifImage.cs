@@ -93,7 +93,7 @@ namespace AvaloniaGif
 
         public override void Render(DrawingContext context)
         {
-            if (gifInstance.GetBitmap() is WriteableBitmap source && backingRTB is not null)
+            if (gifInstance.GetBitmap() is WriteableBitmap source && backingRTB != null)
             {
                 using (var ctx = backingRTB.CreateDrawingContext(null))
                 {
@@ -101,7 +101,7 @@ namespace AvaloniaGif
                     ctx.DrawBitmap(source.PlatformImpl, 1, ts,ts);
                 }
             }
-            if (backingRTB is not null && Bounds.Width > 0 && Bounds.Height > 0)
+            if (backingRTB != null && Bounds.Width > 0 && Bounds.Height > 0)
             {
                 var viewPort = new Rect(Bounds.Size);
                 var sourceSize = backingRTB.Size;

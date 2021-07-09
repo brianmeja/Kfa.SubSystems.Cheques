@@ -535,7 +535,7 @@ namespace AvaloniaGif.Decoding
                         break;
                 }
 
-                // Break the loop when the stream is not valid anymore.
+                // Break the loop when the stream != valid anymore.
                 if (str.Position >= str.Length & terminate == false)
                     throw new InvalidProgramException("Reach the end of the filestream without trailer block.");
             } while (!terminate);

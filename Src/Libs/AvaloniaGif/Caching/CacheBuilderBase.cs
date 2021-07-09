@@ -38,7 +38,7 @@ namespace AvaloniaGif.Caching
         /// <summary>
         /// Sets the interval in between automatic purges of expired values.
         /// 
-        /// If this is not null, then a background task will run at that frequency to sweep the cache for
+        /// If this != null, then a background task will run at that frequency to sweep the cache for
         /// all expired values.
         /// 
         /// If it is null, expired values will be removed only at the time when you try to access them.

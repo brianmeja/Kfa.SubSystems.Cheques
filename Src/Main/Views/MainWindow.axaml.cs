@@ -25,7 +25,7 @@ namespace Kfa.SubSystems.Cheques.Views
         {
             AvaloniaXamlLoader.Load(this);
             new LoginPage().Show();
-            new UserDetails().Show();
+            new ChequeBatchDetails().Show();
 
         }
     }

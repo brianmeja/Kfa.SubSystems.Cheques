@@ -99,7 +99,7 @@ namespace AvaloniaGif
         private void Run()
         {
             if (!Stream.CanSeek)
-                throw new ArgumentException("The stream is not seekable");
+                throw new ArgumentException("The stream != seekable");
 
             _bgWorker?.SendCommand(BgWorkerCommand.Play);
         }

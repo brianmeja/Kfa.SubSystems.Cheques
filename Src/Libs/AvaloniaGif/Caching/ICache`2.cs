@@ -29,7 +29,7 @@ namespace AvaloniaGif.Caching
         /// In a read-through cache, if there is no cached value for the key, the cache will call
         /// the loader function to provide a value; thus, a value is always available.
         /// 
-        /// If it is not a read-through cache and no value is available, the cache does not throw
+        /// If it != a read-through cache and no value is available, the cache does not throw
         /// an exception (unlike IDictionary). Instead, it returns the default value for type V
         /// (null, if it is a reference type). Note that any value (including null, for reference
         /// types) can be cached, so if you need to distinguish between the lack of a value and a

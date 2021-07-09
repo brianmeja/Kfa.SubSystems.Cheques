@@ -3,10 +3,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="1000" Height="1000" Width="1000"
-        xmlns:Controls="clr-namespace:Avalonia.ExtendedToolkit.Controls;assembly=Avalonia.ExtendedToolkit"
-        xmlns:Grd="clr-namespace:Avalonia.Controls;assembly=Avalonia.Controls.DataGrid"
-        x:Class="Kfa.SubSystems.Cheques.Views.ChequeBatchDetails" SystemDecorations="BorderOnly"
-        Title="ChequeBatchDetails">
+        x:Class="Kfa.SubSystems.Cheques.Views.ChequeBatchDetailsAp" SystemDecorations="BorderOnly"
+        Title="ChequeBatchDetailsAp">
 
   <Grid  RowDefinitions="Auto,Auto,Auto,*,Auto"
      VerticalAlignment="Stretch"
@@ -47,25 +45,13 @@
         <TextBlock Text="TOTAL AMOUNT" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
         <TextBox  MinWidth="200" FontSize="28"  Margin="10"/>
       </WrapPanel>
-      <WrapPanel  VerticalAlignment="Stretch"
+      <WrapPanel Grid.Row="1" VerticalAlignment="Stretch"
      HorizontalAlignment="Stretch" Orientation="Horizontal" >
         <Button Content="AS REPORT" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" FontSize="28"  Margin="10"/>
-      
+
       </WrapPanel>
-      </WrapPanel>
-    
-     <TextBlock Text="CHEQUE TRANSACTIONS DETAILS"  Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" FontSize="28"  Margin="10"/>
-     <DataGrid Grid.Row="4" VerticalAlignment="Stretch"
-     HorizontalAlignment="Stretch" >
-       <DataGrid.Columns>
-       <DataGridTextColumn MinWidth="70" Header="date"></DataGridTextColumn>
-         <DataGridTextColumn  MinWidth="70" Header="ledger code"></DataGridTextColumn>
-         <DataGridTextColumn MinWidth="70" Header="cheque number"></DataGridTextColumn>
-         <DataGridTextColumn MinWidth="70" Header="particulars"></DataGridTextColumn>
-         <DataGridTextColumn MinWidth="70" Header="amount"></DataGridTextColumn>
-       </DataGrid.Columns>
-       </DataGrid>
-  
+
+    </WrapPanel>
     <!--<Controls:MetroGroupBox Foreground="AntiqueWhite" Header="CHEQUEBATCHDETAILS" VerticalAlignment="Stretch" HeaderFontSize="28" HorizontalAlignment="Stretch"  >
       <StackPanel>
         <TextBlock Text="CHANGE PASSWORD" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="28"  Margin="10"/>
@@ -80,7 +66,18 @@
 
 
     </Controls:MetroGroupBox>-->
+
+
+
+
+
+
+
+
   </Grid>
-  
- 
+
+
 </Window>
+
+
+

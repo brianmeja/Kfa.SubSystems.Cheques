@@ -20,8 +20,8 @@ namespace AvaloniaGif.Caching
         /// <summary>
         /// Specifies a value computation function for a read-through cache.
         /// 
-        /// If this is not null, then any call to <see cref="ICache{K, V}.Get(K)"/> or
-        /// <see cref="ICache{K, V}.TryGetValue(K, out V)"/> with a key that is not already in the
+        /// If this != null, then any call to <see cref="ICache{K, V}.Get(K)"/> or
+        /// <see cref="ICache{K, V}.TryGetValue(K, out V)"/> with a key that != already in the
         /// cache will cause the function to be called with that key as an argument; the returned
         /// value will then be stored in the cache and returned to the caller.
         /// 
@@ -58,7 +58,7 @@ namespace AvaloniaGif.Caching
         /// <summary>
         /// Specifies the maximum number of entries that can be in the cache.
         /// 
-        /// If this is not null, then any attempt to add more entries when the cache has reached
+        /// If this != null, then any attempt to add more entries when the cache has reached
         /// this limit will result in existing entries being evicted, in the order that they were
         /// originally added or last updated.
         /// 
