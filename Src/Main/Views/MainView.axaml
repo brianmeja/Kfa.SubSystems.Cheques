@@ -1,0 +1,274 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls"
+				     xmlns:flex="clr-namespace:Avalonia.Flexbox;assembly=Avalonia.Flexbox"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+             xmlns:l="using:System.Collections"
+				     xmlns:vm="using:Kfa.SubSystems.Cheques.Views"
+			 xmlns:pages="using:Kfa.SubSystems.Cheques.Pages"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             Background="Pink"
+             BorderBrush="Black"
+             BorderThickness="0.7"
+             x:Class="Kfa.SubSystems.Cheques.Views.MainView">
+  <UserControl.DataContext>
+    <vm:MainViewViewModel/>
+  </UserControl.DataContext>
+  <NavigationView Name="NavigationView" Header="KFA Sub Systems"
+                  AlwaysOpen="False"
+                  OpenPaneLength="300">
+    <NavigationViewItem  Header="Home"
+              Icon="resm:Kfa.SubSystems.Cheques.Assets.MenuIcons.general.png"
+              Title="Home" MinWidth="120">
+      <NavigationViewItem.Content>
+        <GroupBox Margin="10" Grid.Row="1"
+              ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                Header="Recently Added Samples"
+                TextBlock.FontSize="20">
+          <flex:FlexPanel Direction="Row"
+                  Wrap="Wrap"
+                  AlignContent="FlexStart"
+                  AlignItems="Center"
+                  JustifyContent="FlexStart"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+            <NavigationViewLinker Icon="resm:Kfa.SubSystems.Cheques.Assets.MenuIcons.general.png"
+                        Title="Home sayers" LinkTo="{Binding #float_bar_btn}"
+                                  MaxWidth="200"
+                        Content="{Binding Descriptions.FloattingButtonBar}"/>
+            <NavigationViewLinker Icon="{DynamicResource BoxIcons.RegularCodeAlt}"
+                        Title="{Binding Titles.FloattingButtonBar}" LinkTo="{Binding #float_bar_btn}"
+                        Content="{Binding Descriptions.FloattingButtonBar}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib2019.Slider_16x}"
+                        Title="{Binding Titles.ModernSlider}" LinkTo="{Binding #mslider}"
+                        Content="{Binding Descriptions.ModernSlider}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib2019.ShapeArcRing_16x}"
+                        Title="{Binding Titles.ProgressRing}" LinkTo="{Binding #pring}"
+                        Content="{Binding Descriptions.ProgressRing}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib.GroupBox_16x}"
+                        Title="GroupBox" LinkTo="{Binding #gb}"
+                        Content="{Binding Descriptions.GroupBox}"/>
+            <NavigationViewLinker Icon="{DynamicResource Material.CardsOutline}"
+                        Title="{Binding Titles.CardCollection}" LinkTo="{Binding #cc}"
+                        Content="{Binding Descriptions.CardCollection}"/>
+            <NavigationViewLinker Icon="{DynamicResource FluentIconsFilled.tab_desktop_new_page_filled}"
+                        Title="{Binding Titles.AuraTabView}" LinkTo="{Binding #aw}"
+                        Content="{Binding Descriptions.AuraTabView}"/>
+            <NavigationViewLinker Icon="{DynamicResource FluentIcons.navigation_regular}"
+                        Title="{Binding Titles.NavigationView}" LinkTo="{Binding #nw}"
+                        Content="{Binding Descriptions.NavigationView}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib.RibbonMenu_16x}"
+                        Title="Ribbon" LinkTo="{Binding #rb}"
+                        Content="{Binding Descriptions.Ribbon}"/>
+            <NavigationViewLinker Icon="{DynamicResource BoxIcons.RegularMessageAltDots}"
+                        Title="{Binding Titles.ContentDialog}" LinkTo="{Binding #ctndialog}"
+                        Content="{Binding Descriptions.ContentDialog}"/>
+            <NavigationViewLinker Icon="{DynamicResource BoxIcons.SolidMessageAltDots}"
+                        Title="{Binding Titles.MessageDialog}" LinkTo="{Binding #msgbox}"
+                        Content="{Binding Descriptions.MessageDialog}"/>
+            <NavigationViewLinker Icon="{DynamicResource FluentIconsFilled.image_filled}"
+                        Title="{Binding Titles.BlurryImage}" LinkTo="{Binding #blurryimg_pg}"
+                        Content="{Binding Descriptions.BlurryImage}"/>
+          </flex:FlexPanel>
+        </GroupBox>
+      </NavigationViewItem.Content>
+    </NavigationViewItem>
+    <Separator/>
+    <NavigationViewItem Header="Basic Input" Title="Basic Input"
+              Icon="{DynamicResource FontAwesome.CheckSquareRegular}">
+      <NavigationViewItem.Content>
+        <GroupBox Margin="10,0" Padding="0"
+            TextBlock.FontSize="20" Header="{x:Null}">
+          <flex:FlexPanel Direction="Row"
+                  Wrap="Wrap"
+                  AlignContent="FlexStart"
+                  AlignItems="Center"
+                  JustifyContent="FlexStart"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+            <NavigationViewLinker Icon="{DynamicResource BoxIcons.RegularCodeAlt}"
+                        Title="{Binding Titles.FloattingButtonBar}" LinkTo="{Binding #float_bar_btn}"
+                        Content="{Binding Descriptions.FloattingButtonBar}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib2019.Slider_16x}"
+                        Title="{Binding Titles.ModernSlider}" LinkTo="{Binding #mslider}"
+                        Content="{Binding Descriptions.ModernSlider}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib2019.ShapeArcRing_16x}"
+                        Title="{Binding Titles.ProgressRing}" LinkTo="{Binding #pring}"
+                        Content="{Binding Descriptions.ProgressRing}"/>
+          </flex:FlexPanel>
+        </GroupBox>
+      </NavigationViewItem.Content>
+      <NavigationViewItem Name="float_bar_btn" Header="{Binding Titles.FloattingButtonBar}" Title="Floating Button Bar"
+                Icon="{DynamicResource BoxIcons.RegularCodeAlt}">
+        <NavigationViewItem.Content>
+			<pages:MidiManipulationPage  />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+      <NavigationViewItem Name="mslider" Header="{Binding Titles.ModernSlider}"  Title="{Binding Titles.ModernSlider}"
+                Icon="{DynamicResource VSImageLib2019.Slider_16x}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="bsdadbfhdbfsdfa sdfasjdfbasdf" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+      <NavigationViewItem Name="pring" Header="{Binding Titles.ProgressRing}" Title="{Binding Titles.ProgressRing}"
+                Icon="{DynamicResource VSImageLib2019.ShapeArcRing_16x}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="fdgs gsdfg fgsdgd fgsdfgsd fgsdfgsdf" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+    </NavigationViewItem>
+    <NavigationViewItem Header="Layout" Title="Layout"
+                 Icon="{DynamicResource BoxIcons.RegularLayout}">
+      <NavigationViewItem.Content>
+        <GroupBox Margin="10,0" Padding="0"
+            TextBlock.FontSize="20" Header="{x:Null}">
+          <flex:FlexPanel Direction="Row"
+                  Wrap="Wrap"
+                  AlignContent="FlexStart"
+                  AlignItems="Center"
+                  JustifyContent="FlexStart"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib.GroupBox_16x}"
+                          Title="GroupBox" LinkTo="{Binding #gb}"
+                          Content="{Binding Descriptions.GroupBox}"/>
+            <NavigationViewLinker Icon="{DynamicResource Material.CardsOutline}"
+                        Title="{Binding Titles.CardCollection}" LinkTo="{Binding #cc}"
+                        Content="{Binding Descriptions.CardCollection}"/>
+          </flex:FlexPanel>
+        </GroupBox>
+      </NavigationViewItem.Content>
+      <NavigationViewItem Name="gb" Header="GroupBox" Title="GroupBox"
+                   Icon="{DynamicResource VSImageLib.GroupBox_16x}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="cvxbxb bcvbxcv bxcv b xcvbxcvb" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+      <NavigationViewItem Name="cc" Header="{Binding Titles.CardCollection}" Title="{Binding Titles.CardCollection}"
+                   Icon="{DynamicResource Material.CardsOutline}">
+        <NavigationViewItem.Content>
+          <TextBlock Text=" cbvxbv bxcv bcv bxcvbxcvbxcv" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+    </NavigationViewItem>
+    <NavigationViewItem Header="Navigation" Title="Navigation"
+                 Icon="{DynamicResource FluentIcons.navigation_regular}">
+      <NavigationViewItem.Content>
+        <GroupBox Margin="10,0" Padding="0"
+            TextBlock.FontSize="20" Header="{x:Null}">
+          <flex:FlexPanel Direction="Row"
+                  Wrap="Wrap"
+                  AlignContent="FlexStart"
+                  AlignItems="Center"
+                  JustifyContent="FlexStart"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+            <NavigationViewLinker Icon="{DynamicResource FluentIconsFilled.tab_desktop_new_page_filled}"
+                        Title="{Binding Titles.AuraTabView}" LinkTo="{Binding #aw}"
+                        Content="{Binding Descriptions.AuraTabView}"/>
+            <NavigationViewLinker Icon="{DynamicResource FluentIcons.navigation_regular}"
+                        Title="{Binding Titles.NavigationView}" LinkTo="{Binding #nw}"
+                        Content="{Binding Descriptions.NavigationView}"/>
+            <NavigationViewLinker Icon="{DynamicResource VSImageLib.RibbonMenu_16x}"
+                        Title="Ribbon" LinkTo="{Binding #rb}"
+                        Content="{Binding Descriptions.Ribbon}"/>
+          </flex:FlexPanel>
+        </GroupBox>
+      </NavigationViewItem.Content>
+      <NavigationViewItem Name="aw" Header="{Binding Titles.AuraTabView}" Title="{Binding Titles.AuraTabView}"
+                   Icon="{DynamicResource FluentIconsFilled.tab_desktop_new_page_filled}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="cvbxcb cvxb bcvxbxcvbcvbxcvbxcvbcbvxcvb" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+      <NavigationViewItem Name="nw" Header="NavigationView" Title="{Binding Titles.NavigationView}"
+                   Icon="{DynamicResource FluentIcons.navigation_regular}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="xcbxcvbxcbvc bbxcv bxcvbcv bcvxbcv bxcvbxcvbxcvb" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+      <NavigationViewItem Name="rb" Header="Ribbon" Title="Ribbon"
+                   Icon="{DynamicResource VSImageLib.RibbonMenu_16x}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="cvbxcvbxcvb cvbx cvbxcvbxcvbcvbxcvb" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+    </NavigationViewItem>
+    <NavigationViewItem Header="Dialogs" Title="Dialogs"
+                 Icon="{DynamicResource BoxIcons.RegularMessageAlt}">
+      <NavigationViewItem.Content>
+        <GroupBox Margin="10,0" Padding="0"
+            TextBlock.FontSize="20" Header="{x:Null}">
+          <flex:FlexPanel Direction="Row"
+                  Wrap="Wrap"
+                  AlignContent="FlexStart"
+                  AlignItems="Center"
+                  JustifyContent="FlexStart"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+            <NavigationViewLinker Icon="{DynamicResource BoxIcons.RegularMessageAltDots}"
+                        Title="{Binding Titles.ContentDialog}" LinkTo="{Binding #ctndialog}"
+                        Content="{Binding Descriptions.ContentDialog}"/>
+            <NavigationViewLinker Icon="{DynamicResource BoxIcons.SolidMessageAltDots}"
+                        Title="{Binding Titles.MessageDialog}" LinkTo="{Binding #msgbox}"
+                        Content="{Binding Descriptions.MessageDialog}"/>
+          </flex:FlexPanel>
+        </GroupBox>
+      </NavigationViewItem.Content>
+      <NavigationViewItem Name="ctndialog" Header="ContentDialog" Title="{Binding Titles.ContentDialog}"
+                   Icon="{DynamicResource BoxIcons.RegularMessageAltDots}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="vcbxcbv xcvbc vbxcvb cxvbxcvb cvxbcbv cvxb" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+      <NavigationViewItem Name="msgbox" Header="MessageDialog" Title="MessageDialog"
+                Icon="{DynamicResource BoxIcons.SolidMessageAltDots}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="vbxcb xcvbvb cvbxcv bxcvbcvb bxcvbcvbxcvbxcvb" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+    </NavigationViewItem>
+    <NavigationViewItem Header="Media" Title="Media" Icon="{DynamicResource VSImageLib.Media_16x}">
+      <NavigationViewItem.Content>
+        <GroupBox Margin="10,0" Padding="0"
+            TextBlock.FontSize="20" Header="{x:Null}">
+          <flex:FlexPanel Direction="Row"
+                  Wrap="Wrap"
+                  AlignContent="FlexStart"
+                  AlignItems="Center"
+                  JustifyContent="FlexStart"
+                  ColumnSpacing="10"
+                  RowSpacing="10">
+            <NavigationViewLinker Icon="{DynamicResource FluentIconsFilled.image_filled}"
+                        Title="{Binding Titles.BlurryImage}" LinkTo="{Binding #blurryimg_pg}"
+                        Content="{Binding Descriptions.BlurryImage}"/>
+          </flex:FlexPanel>
+        </GroupBox>
+      </NavigationViewItem.Content>
+      <NavigationViewItem Name="blurryimg_pg" Header="BlurryImage" Title="{Binding Titles.BlurryImage}"
+                          Icon="{DynamicResource FluentIconsFilled.image_filled}">
+        <NavigationViewItem.Content>
+          <TextBlock Text="xcvxzcv zxcv zxcv cvzxcvzxc vzxcvxcv" FontSize ="36" />
+        </NavigationViewItem.Content>
+      </NavigationViewItem>
+    </NavigationViewItem>
+    <!-- <NavigationViewItem Header="MVVM" Title="{Binding Titles.MVVM}"  -->
+    <!--                     Icon="{DynamicResource ReactiveUILogo}"> -->
+    <!--   <NavigationViewItem Header="{Binding Titles.CardCollection}" Title="{Binding Titles.CardCollection}" -->
+    <!--                       Icon="{DynamicResource Material.CardsOutline}"> -->
+    <!--     <NavigationViewItem.Content> -->
+    <!--       <rpg:ReactiveCardCollectionPage/> -->
+    <!--     </NavigationViewItem.Content> -->
+    <!--   </NavigationViewItem> -->
+    <!-- </NavigationViewItem> -->
+    <NavigationViewItem Header="Settings" Title="Settings" VerticalAlignment="Bottom"
+                        Icon="{DynamicResource EvaIcons.Settings2Outline}">
+      <NavigationViewItem.Content>
+        <TextBlock Text="bxcv cvbxcv bcvbxcvbxcvb cvbcvbc vbcvbbbbbvcxbv " FontSize ="36" />
+      </NavigationViewItem.Content>
+    </NavigationViewItem>
+  </NavigationView>
+</UserControl>

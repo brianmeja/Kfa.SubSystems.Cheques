@@ -1,5 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
+using Kfa.SubSystems.Cheques.Contracts;
 using Kfa.SubSystems.Cheques.ViewModels;
 using System;
 
