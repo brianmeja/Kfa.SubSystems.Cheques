@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -55,6 +55,8 @@
     <PackageReference Include="Prism.Avalonia" Version="7.2.0.1430" />
     <PackageReference Include="Prism.Unity.Avalonia" Version="7.2.0.1430" />
     <PackageReference Include="ReactiveHistory" Version="0.10.0-rc1" />
+    <PackageReference Include="Serilog" Version="2.10.1-dev-01343" />
+    <PackageReference Include="Serilog.Sinks.MySQL" Version="4.5.0-dev-00044" />
      <PackageReference Include="System.Reactive" Version="5.0.0" />
      <PackageReference Include="System.Reactive.Core" Version="5.0.0" />
      <PackageReference Include="System.Reactive.Interfaces" Version="5.0.0" />
@@ -69,9 +71,8 @@
      <PackageReference Include="Unity" Version="5.11.10" />
      <PackageReference Include="WebViewControl-Avalonia" Version="2.85.44" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Kfa.SubSystems.Cheques.Contracts.csproj" />
   </ItemGroup>
-
 </Project>

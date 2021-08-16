@@ -1,0 +1,79 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"  xmlns:pg="clr-namespace:Aura.UI.Controls"
+         xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+        xmlns:behaviors="clr-namespace:Kfa.SubSystems.Cheques.Contracts.Behaviors;assembly=Kfa.SubSystems.Cheques.Contracts"
+        xmlns:progRing="clr-namespace:AvaloniaProgressRing;assembly=AvaloniaProgressRing"
+        xmlns:Controls="clr-namespace:Avalonia.ExtendedToolkit.Controls;assembly=Avalonia.ExtendedToolkit">
+	<Design.PreviewWith>
+		<Grid Width="800"
+				Height="600" Background="White">
+			<pg:PageContentDialog Content="Hello" />
+		</Grid>
+	</Design.PreviewWith>
+	<Style Selector="pg|PageContentDialog">
+		<Setter Property="Background" Value="{DynamicResource ContentDialogBackground}" />
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Grid Name="PART_GridContainer"
+					  Background="#77000000">
+					<Border Name="PART_BorderShadow"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							BoxShadow="0 5 30 0 #99000000"
+							Background="{TemplateBinding Background}"
+              BorderBrush="{DynamicResource ContentDialogBorderBrush}"
+              BorderThickness="0"
+              Padding="15">
+						<Grid RowDefinitions="*,Auto,Auto">
+							<ContentPresenter Grid.RowSpan="3" Grid.Row="0"
+											  Name="PART_ContentPresenter"
+											  Content="{TemplateBinding Content}"
+											  ContentTemplate="{TemplateBinding ContentTemplate}" />
+							<DockPanel Grid.Row="0">
+								<Button Name="PART_OkButton" FontSize="28" Background="DarkRed"
+						 Content="{TemplateBinding OkButtonContent}"
+						 HorizontalAlignment="Right" VerticalAlignment="Top" />
+							</DockPanel>
+							<StackPanel  Name="LongProcessStackPanel"  Grid.Row="4" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" IsVisible="{Binding LongProcessNotification.IsActive}" Background="Transparent">
+								<i:Interaction.Behaviors>
+									<behaviors:ControlHideOnClickBehavior />
+								</i:Interaction.Behaviors>
+								<Grid HorizontalAlignment="Stretch" ColumnDefinitions="*,Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+									<TextBlock Name="LongProcessTitleTextBlock" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding LongProcessNotification.Title}" Margin="4" HorizontalAlignment="Center" Classes="h3">
+										<i:Interaction.Behaviors>
+											<behaviors:ControlHideOnClickBehavior />
+										</i:Interaction.Behaviors>
+									</TextBlock>
+									<progRing:ProgressRing Width="80"
+											  Height="80" Grid.RowSpan="10"  Grid.Column="0"  Grid.Row="0"
+											  IsActive="{Binding ElementName=ProgressRingActive, Path=IsChecked}"
+											  HorizontalAlignment="Right"
+											  VerticalAlignment="Top"
+											  Foreground="LightBlue"
+											  Margin="10,24,0,0" />
+									<Button Grid.Row="1" Grid.Column="2" Name="LongProcessHideButton" Classes="hideButton" Content="">
+										<i:Interaction.Behaviors>
+											<behaviors:ControlHideOnClickBehavior />
+										</i:Interaction.Behaviors>
+									</Button>
+									<TextBlock Name="LongProcessMessageTextBlock"  Grid.Column="1"  Grid.Row="1" Text="{Binding LongProcessNotification.Message}" Margin="4" HorizontalAlignment="Center" Classes="h4" />
+									<TextBlock Name="LongProcessSubMessageTextBlock"  Grid.Column="1"  Grid.Row="2" Text="{Binding LongProcessNotification.SubMessage}" HorizontalAlignment="Center"  Margin="4" Classes="h4 secondary" />
+									<TextBlock Name="LongProcessSubMessageOptionTextBlock"  Grid.Column="1"  Grid.Row="3" Text="{Binding LongProcessNotification.SubMessageOption}" HorizontalAlignment="Center"  Margin="4" Classes="h6" />
+									<ProgressBar Name="LongProcessProgressBar" HorizontalAlignment="Stretch"
+													   Margin="4" Foreground="Gray" Background="Transparent"
+													   IsIndeterminate="True"
+													   Maximum="100"
+													   Minimum="0"  Grid.Column="0"  Grid.Row="5"  Grid.ColumnSpan="10"
+													   IsVisible="{Binding LongProcessNotification.IsActive}">
+										<i:Interaction.Behaviors>
+											<behaviors:ControlHideOnClickBehavior />
+										</i:Interaction.Behaviors>
+									</ProgressBar>
+								</Grid>
+							</StackPanel>
+						</Grid>
+					</Border>
+				</Grid>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+</Styles>

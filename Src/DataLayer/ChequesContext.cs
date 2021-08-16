@@ -1,31 +1,31 @@
 namespace Kfa.SubSystems.Cheques.Datalayer
 {
     using Microsoft.EntityFrameworkCore;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Pomelo.EntityFrameworkCore.MySql;
     using MySqlConnector;
-    namespace Src.Models {
-        public class ChequesContext : DbContext {
+    using System;
+    using System.Linq;
+
+    namespace Src.Models
+    {
+        public class ChequesContext : DbContext
+        {
             public ChequesContext()
-             { 
-                
+            {
             }
-           public virtual DbSet<ChequeRequisitionBatch> ChequeRequisitionBatches {get;set;}
-           public virtual DbSet<CostCentre> CostCentres {get; set;}
-           public virtual DbSet<GeneralLedgersDetail> GeneralLedgerDetails {get;set;}
-           public virtual DbSet<LeasedPropertiesAccount> LeasedPropertiesAccounts {get;set;}
-           public virtual DbSet<LedgerAccount> LedgerAccounts {get;set;}
-           public virtual DbSet<PaidCheque> PaidCheques {get;set;}
-           public virtual DbSet <Supplier> Suppliers {get;set;}
-           public virtual DbSet <UserRole> UserRoles {get;set;}
 
-             
-            public ChequesContext(DbContextOptions<ChequesContext> options) : base (options) {
+            public virtual DbSet<ChequeRequisitionBatch> ChequeRequisitionBatches { get; set; }
+            public virtual DbSet<CostCentre> CostCentres { get; set; }
+            public virtual DbSet<GeneralLedgersDetail> GeneralLedgerDetails { get; set; }
+            public virtual DbSet<LeasedPropertiesAccount> LeasedPropertiesAccounts { get; set; }
+            public virtual DbSet<LedgerAccount> LedgerAccounts { get; set; }
+            public virtual DbSet<PaidCheque> PaidCheques { get; set; }
+            public virtual DbSet<Supplier> Suppliers { get; set; }
+            public virtual DbSet<UserRole> UserRoles { get; set; }
 
-             }
-    
+            public ChequesContext(DbContextOptions<ChequesContext> options) : base(options)
+            {
+            }
+
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 static MySqlConnection GetConnection()
@@ -39,7 +39,7 @@ namespace Kfa.SubSystems.Cheques.Datalayer
             }
 
             protected override void OnModelCreating(ModelBuilder modelBuilder)
-             {
+            {
                 base.OnModelCreating(modelBuilder);
                 modelBuilder.Model.GetEntityTypes()
                     .SelectMany(t => t.GetProperties())
@@ -76,9 +76,7 @@ namespace Kfa.SubSystems.Cheques.Datalayer
                 .HasMany(e => e.DebitPaidCheques)
                 .WithOne(e => e.DebitGl)
                 .HasForeignKey(e => e.PaidChequeDebitGlId);
-
             }
         }
-
     }
 }
